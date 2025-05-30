@@ -5,22 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            margin: 0;
+        padding: 0;
+        height: 100vh; /* Full viewport height */
+        overflow: hidden; /* Prevent scrollbars */
+        position: relative; /* For absolute positioning of overlay */
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 20px;
+        }
+        p {
+            color: #ffffff;
+            text-align: left;
+            margin-top: 10px;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(to right, #000000, rgb(255, 187, 0));
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .button {
+            display: inline-block;
+            display: flex;
+            align-self: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #000000;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+        background: linear-gradient(to right, #000000, rgb(255, 187, 0));
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
         /* Make video take full container size */
-    body{
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent scrollbars */
-    position: relative; /* For absolute positioning of overlay */
-    }
-    video {
+  video {
     width: 100%;
     height: auto;
     display: block;
-    }
+  }
 
   /* Overlay content on top of video */
-    .overlay {
+  .overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,40 +71,29 @@
     color: white; /* text color */
     text-align: center;
     pointer-events: none; /* So clicks go to button only */
-    }
+  }
 
   /* Make button clickable */
 
   /* Hover effect for button */
-    .overlay a:hover {
+  .overlay a:hover {
     background-color: #0056b3;
-    }
+  }
 
   /* Logo image styling */
-    .overlay img {
+  .overlay img {
     width: 150px;
     height: auto;
     margin-bottom: 20px;
-    }
-    .MastheadVideo {
+  }
+  .MastheadVideo {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
     width: 100%;
-    }
-    button{
-    background :rgb(177, 22, 17);
-    width: 250px;
-    height: 30px;
-    border: white;
-    border-radius: 10px;
-    transition:0.5sec;
-    }
-    button:hover{
-    background-color:rgb(112, 15, 11) ;
-    }
+  }
     </style>
 </head>
 <body>
@@ -73,7 +105,7 @@
         <p>Your one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayi Your one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayiYour one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayiYour one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayiYour one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayiYour one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayi
             Your one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayiYour one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayiYour one-stop shop for all your automotive needs. we have been going strong since 1980.with the help of our founder dniel aduayi  </p>
     </main>
-    <div class="hero"></div>
+
     <footer>
         <div class="footer">
             <p>2023 Daniel Auto Dealer. All rights reserved.</p>
@@ -82,8 +114,11 @@
                         <source style="overflow: hidden;" src="advert.mp4" type="video/webm">
                         <source style="overflow: hidden;" src="advert.mp4" type="video/mp4">
                     </video>
-    
-
+    <div class="overlay">
+<button class="Button Button--primary TopCTAButton">
+        <span class="Button-label">Play Free Now</span>
+    </button>
+    </div>
 <div class="overlay-1"></div></div>
         </div>
     </footer>
