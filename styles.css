@@ -1,19 +1,50 @@
-   body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            font-size: 18px;
-            padding: 0;
-            background-color: #000000;
-            color: white;
-            
-        }
-        header, footer {
-            background-color: #181515;
-            padding: 20px;
-            background: linear-gradient(to right, #000000 0%, #f8b200 100%);
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: right;
-        }
+.btn {
+  display: inline-block;
+  background-color: #f8b200;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d49a00;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 18px;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+}
+
+header, footer {
+    background-color: #181515;
+    padding: 20px;
+    background: linear-gradient(to right, #000000 0%, #f8b200 100%);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+}
+.vehicle-info {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #f8b200;
+}
