@@ -1,50 +1,196 @@
-.btn {
-  display: inline-block;
-  background-color: #f8b200;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #d49a00;
-}
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    font-size: 18px;
-    padding: 0;
-    background-color: #000000;
-    color: white;
-}
-
-header, footer {
-    background-color: #181515;
-    padding: 20px;
-    background: linear-gradient(to right, #000000 0%, #f8b200 100%);
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
-}
-.vehicle-info {
-  background-color: #1a1a1a;
-  padding: 20px;
-  border-radius: 0 0 10px 10px;
-}
-.nav-links a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  color: #f8b200;
-}
+/* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #d4af37; /* Gold text */
+            background-color: #000000; /* Deep black background */
+        }
+        
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: linear-gradient(to right, #000000, #1a1a1a, #333333, #d4af37); /* Black to gold gradient */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+        
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: #d4af37; /* Gold */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ffffff; /* White on hover */
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #d4af37; /* Gold */
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid #d4af37; /* Gold border */
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ffffff; /* White for better readability */
+        }
+        
+        /* About Section */
+        .section {
+            padding: 60px 5%;
+        }
+        
+        .section-dark {
+            background-color: #0a0a0a; /* Very dark gray */
+            border-top: 1px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #d4af37; /* Gold */
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #d4af37; /* Gold */
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            color: #cccccc; /* Light gray for readability */
+        }
+        
+        .about-image {
+            flex: 1;
+            width: 300px;
+            background-color: #1a1a1a; /* Dark gray */
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #d4af37; /* Gold border */
+            color: #d4af37; /* Gold text */
+        }
+        
+        /* Button */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #000000, #d4af37); /* Black to gold */
+            color: #ffffff; /* White */
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid #d4af37;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(to right, #d4af37, #000000); /* Reverse gradient on hover */
+            color: #000000; /* Black text on hover */
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #000000, #1a1a1a, #333333, #d4af37); /* Black to gold gradient */
+            color: #ffffff;
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #d4af37;
+        }
+        
+        .copyright p {
+            margin: 0;
+            color: #ffffff;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+        }
