@@ -8,7 +8,7 @@
         body {
             font-family: 'Arial', sans-serif;/* apropriate font thts sasn serif */
             line-height: 1.6;
-            color: #d4af37; /* Gold text */
+            color: #ffffff; /* Gold text */
             background-color: #000000; /* black background */
             opacity: 0;
     animation: fadeIn 1.2s ease-in-out forwards; /* Fade-in effect */
@@ -19,6 +19,10 @@
     }
 }
 
+p {color: white;
+            margin-bottom: 15px;/* adds space between paragraphs */
+        }
+        
         
         /* Navigation */
         .navbar {
@@ -152,10 +156,10 @@
             display: inline-block;
             background: linear-gradient(to right, #000000, #d4af37); /* Black to gold */
             color: #ffffff; /* White */
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
+            padding: 12px 25px;/* part of the box */
+            text-decoration: none;/* removes unnderline */
+            border-radius: 10px;/* ads curve arund the edges */
+            font-weight: 500;/* bolds */
             transition: all 0.5s;
             border: 1px solid #d4af37;
         }
