@@ -149,21 +149,21 @@ p {
     flex: 1;
     display: flex;
     justify-content: center;/* puts all content centerd */
-    align-items: center;
+    align-items: center;/* aligns the whole things centerd  */
 }
 
 .about-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    border: 2px solid #d4af37;
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    width: 100%;/* sets it at 500px*/
+    max-width: 500px;/* 500 max width of image */
+    border-radius: 10px;/* curve at the edges */
+    border: 2px solid #d4af37;/* gold border */
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);/* shaddow under*/
     transform: rotateY(0deg);
-    transition: transform 0.5s;
+    transition: transform 0.5s;/* animation */
 }
 
 .about-image img:hover {
-    transform: rotateY(5deg);
+    transform: rotateY(5deg);/* rotates image 5 deg when hoverd on */
 }
 
 /* ===== Buttons ===== */
