@@ -28,6 +28,8 @@ p {
     align-items: center;/* aligns it horizontaly */
     padding: 15px 5%;/* space arund the elements border */
     background: linear-gradient(to right, #000000, #1a1a1a, #333333, #000000);/* gradient from black to black*/
+    border: 2px solid #d4af37;/* gold border */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);/* shadow for the navbar */
     top: 0;
     z-index: 100;
     text-align: right; /* Aligns text to the right */
