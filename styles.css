@@ -148,6 +148,7 @@ p {color: white;
             align-items: center;
             justify-content: center;
             border: 1px solid #d4af37; /* Gold border */
+            border-radius: 10px;/* Rounded corners */
             color: #d4af37; /* Gold text */
         }
         
