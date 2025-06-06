@@ -72,24 +72,24 @@ p {
 
 .hero-content {
     position: relative; 
-    text-align: center;
+    text-align: center;/* puts the text in the center */
     color: #d4af37;
-    width: 80%;
-    max-width: 800px;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 80%;/* 80%=800px */
+    max-width: 800px;/* the max the width can go*/
+    background-color: rgba(0, 0, 0, 0.8);/* black colour */
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 10px;/* curvges the edges */
     border: 1px solid #d4af37;
     z-index: 1;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;/* cool transitionss */
 }
 
 .hero-content:hover {
-    transform: scale(1.02);
+    transform: scale(1.02);/* makes it bigger on hover */
 }
 
 .hero-content h1 {
-    font-size: 2.8rem;
+    font-size: 2.8rem;/* changes font size */
     margin-bottom: 15px;
 }
 
