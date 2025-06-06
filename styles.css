@@ -29,26 +29,27 @@ p {
     padding: 15px 5%;/* space arund the elements border */
     background: linear-gradient(to right, #000000, #1a1a1a, #333333, #000000);/* gradient from black to black*/
     top: 0;
+    border:3px solid #d4af37; /* Gold border */
     z-index: 100;
+    text-align: right; /* Aligns text to the right */
 }
 
 
 
 .nav-links {
-    display: flex;
-    justify-content: center;
+    display: flex;/* activates flexbox for the links */
     gap: 20px;
 }
 
 .nav-links a {
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
+    color: #d4af37;/* gold colour */
+    text-decoration: none;/* removes the underline */
+    font-weight: 500;/* makes it bold */
+    transition: color 0.3s ease-in-out;/* hover transition */
 }
 
 .nav-links a:hover {
-    color: #ffffff;
+    color: #ffffff;/* makes it turn white */
 }
 
 /* ===== Hero Section ===== */
@@ -56,21 +57,21 @@ p {
     position: relative;
     height: 80vh;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;/* activates flexbox */
+    align-items: center;/* puts it ni center */
+    justify-content: center;/*puts the content insided align to center*/
 }
 
 .hero-video {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100%;/* make it fit the full width of the container */
+    height: 100%;/* make it fit the full height of the container */
     object-fit: cover;
     z-index: 0;
 }
 
 .hero-content {
-    position: relative;
+    position: relative; 
     text-align: center;
     color: #d4af37;
     width: 80%;
