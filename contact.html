@@ -1,65 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Auto Dealer | Premium Vehicles Since 1980</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    
-        
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #000000;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daniel Auto Dealer | Premium Vehicles Since 1980</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Design Principle: Simplicity and Consistency */
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-input[type=submit] {
-    width: 100%;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    body {
+      background-color: #000000;
+      margin: 0;
+      padding: 0;
+    }
 
-input[type=submit]:hover {
-  background-color: #d4af37;
-}
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 10px 20px;
+    }
 
-.container {
-  border-radius: 5px;
-  background-color: #000000;
-  padding: 20px;
-}
+    .logo {
+      color: #d4af37;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-    </style>
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    .container {
+      background-color: #000;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #000000;
+      border-radius: 4px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #ffffff;
+      color: black;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #d4af37;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    /* Design Principle: Contrast */
+    h1 {
+      text-align: center;
+      border: 3px solid #d4af37;
+      padding: 10px;
+      color: #d4af37;
+    }
+
+    /* Design Principle: Null space */
+    .content-wrapper {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      justify-content: space-between;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-    <nav class="navbar">
-        <div class="logo">Daniel-Auto</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-<h3>Contact Form</h3>
 
+<header>
+  <nav class="navbar">
+    <div class="logo">Daniel-Auto</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- JavaScript Greeting (Interaction & Simplicity) -->
 <div class="container">
-<h1 style="text-align: center; border: 3px solid #d4af37; padding: 10px;">contact us</h1>
+  <h1>Contact Us</h1>
+  <p style="text-align: center;">
+    <span id="greeting" style="font-weight: bold;">Hello, visitor!</span>
+    <button onclick="updateGreeting()" style="margin-left: 10px;">Click me</button>
+  </p>
+</div>
 
-<div style="display: flex; justify-content: space-between; gap: 30px; padding: 20px;">
-  <!-- Left Form -->
-  <div style="flex: 1; max-width: 400px;">
+<div class="content-wrapper">
+  <!-- Contact Form (Organization) -->
+  <div style="flex: 1;">
     <div class="container">
       <form action="/action_page.php">
         <label for="fname">First Name</label>
@@ -83,30 +154,37 @@ input[type=submit]:hover {
     </div>
   </div>
 
-  <!-- Right Side Info -->
-<div style="flex: 1; color: white;">
-  <p>Welcome to Daniel Auto Dealer! Since 1980, we have been proud to serve customers with high-quality, premium vehicles and exceptional customer service. Whether you're looking for a brand-new luxury model or a certified pre-owned vehicle, we’re here to help you make the right choice.</p>
+  <!-- Info Side (Contrast, Style, Span tags) -->
+  <div style="flex: 1; color: rgb(255, 255, 255);">
+    <p>Welcome to <span style="color: #d4af37;">Daniel Auto Dealer</span>! Since 1980, we’ve provided <span style="font-weight: bold;">premium vehicles</span> and exceptional customer service.</p>
 
-  <p>Use the form on this page to contact us directly. Our friendly team is ready to assist you with any inquiries regarding our current inventory, pricing details, or upcoming promotions. If you’re not sure which vehicle fits your lifestyle, we’re happy to provide recommendations based on your needs.</p>
+    <p>Use the form to contact us. We assist with <span style="color: #d4af37;">inventory questions, promotions</span>, or finding the right car.</p>
 
-  <p>Need help with financing options? Our financing experts are on hand to walk you through car loan applications, lease agreements, and payment plans tailored just for you. We work with top lenders to ensure competitive rates for all our customers.</p>
+    <p>Interested in financing? Our experts can explain <span style="font-style: italic;">loans, leases, and payment plans</span>.</p>
 
-  <p>Looking to schedule a test drive? Mention your preferred model and time in the subject box and we’ll get back to you within 24 hours. All appointments are confirmed via email or phone for your convenience.</p>
+    <p>Want a test drive? Include the model and time, and we’ll reply within 24 hours!</p>
 
-  <p>We are located in the heart of Winnipeg, Manitoba, and proudly serve customers from all surrounding areas. Use the map below to find us or get directions. We’re excited to welcome you to our showroom!We are located in the heart of Winnipeg, Manitoba, and proudly serve customers from all surrounding areas. Use the map below to find us or get directions. We’re excited to welcome you to our showroom    
-  </p>
+    <p>We are located in Winnipeg, Manitoba. Find us below:</p>
 
-  <div style="border: 2px solid white; height: 200px; width: 100%; margin-top: 20px;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164633.07287071797!2d-97.31764502537439!3d49.853885153217924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73fbf91a2b11%3A0x2b2a1afac6b9ca64!2sWinnipeg%2C%20MB!5e0!3m2!1sen!2sca!4v1749171951323!5m2!1sen!2sca" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div style="border: 2px solid white; height: 200px; width: 100%; margin-top: 20px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164633.07287071797!2d-97.31764502537439!3d49.853885153217924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73fbf91a2b11%3A0x2b2a1afac6b9ca64!2sWinnipeg%2C%20MB!5e0!3m2!1sen!2sca!4v1749171951323!5m2!1sen!2sca" 
+      width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
   </div>
 </div>
 
-</div>
-    <!-- Footer -->
-    <footer>
-        <div class="copyright">
-            <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
+</footer>
+
+<!-- Basic JavaScript -->
+<script>
+  function updateGreeting() {
+    const greeting = document.getElementById("greeting");
+    greeting.textContent = "Thanks for visiting Daniel Auto!";
+  }
+</script>
+
 </body>
 </html>
