@@ -90,6 +90,9 @@
 </head>
 <body>
 
+<div id="form-alert" style="display:none; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;"></div>
+
+
 <header>
   <nav class="navbar">
     <div class="logo">Daniel-Auto</div>
@@ -102,14 +105,17 @@
   </nav>
 </header>
 
-<!-- JavaScript Greeting (Interaction & Simplicity) -->
+<!-- JavaScript Greeting  -->
 <div class="container">
   <h1>Contact Us</h1>
   <p style="text-align: center;">
     <span id="greeting" style="font-weight: bold;">Hello, visitor!</span>
+    //click exampls
     <button onclick="updateGreeting()" style="margin-left: 10px;">Click me</button>
   </p>
 </div>
+
+
 
 <div class="content-wrapper">
   <!-- Contact Form (Organization) -->
@@ -167,7 +173,11 @@
     const greeting = document.getElementById("greeting");
     greeting.textContent = "Thanks for visiting Daniel Auto!";
   }
+  
 </script>
+
+
 
 </body>
 </html>
+
