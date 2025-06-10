@@ -9,9 +9,15 @@
         .shot-7 {
             width: 100%;
             max-width: 600px;
-            height: 295px;
+            height: auto;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d4af37;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .shot-7:hover {
+            transform: scale(1.02);
         }
         
         .featured-brands {
@@ -19,8 +25,10 @@
             justify-content: space-around;
             flex-wrap: wrap;
             margin: 40px 0;
-            border: 3px solid #d4af37;
-
+            padding: 20px;
+            background: linear-gradient(to right, #000000, #1a1a1a, #333333);
+            border-radius: 10px;
+            border: 1px solid #d4af37;
         }
         
         .brand-logo {
@@ -28,16 +36,82 @@
             height: 80px;
             object-fit: contain;
             margin: 15px;
-            filter: grayscale(30%);
+            filter: grayscale(30%) brightness(0.9);
             transition: all 0.3s ease;
         }
         
         .brand-logo:hover {
-            filter: grayscale(0%);
+            filter: grayscale(0%) brightness(1.1);
             transform: scale(1.1);
         }
         
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #d4af37;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+        }
         
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: rgba(26, 26, 26, 0.7);
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(26, 26, 26, 0.9);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .social-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+        color: #d4af37;
+        transform: translateY(-3px);
+    }
+    
+    .social-icon {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+    }
+    
+    .social-link:hover .social-icon {
+        transform: scale(1.2);
+    }
+    
     </style>
 </head>
 <body>
@@ -70,26 +144,58 @@
     <!-- Featured Brands Section -->
     <section class="section">
         <h2 class="section-title">Trusted by the World's Finest Automakers</h2>
-        <div style="    background: linear-gradient(to right, #000000, #333333, #d4af37); border-radius: 10px;" class="featured-brands">
+        <div class="featured-brands">
             <img src="http://pngimg.com/uploads/lamborghini/lamborghini_PNG10709.png" alt="Lamborghini" class="brand-logo">
-            <img src="https://logos-world.net/wp-content/uploads/2020/04/Nissan-Logo-2001-present.png" alt="nissan" class="brand-logo">
+            <img src="https://logos-world.net/wp-content/uploads/2020/04/Nissan-Logo-2001-present.png" alt="Nissan" class="brand-logo">
             <img src="https://purepng.com/public/uploads/large/porsche-logo-transparent-background-poc.png" alt="Porsche" class="brand-logo">
             <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-9-logo-png-transparent.png" alt="Mercedes" class="brand-logo">
-            <img src="https://pngimg.com/uploads/bmw_logo/bmw_logo_PNG19705.png" alt="land rover" class="brand-logo">
-            <img src="https://pngimg.com/d/lexus_PNG57.png" alt="lexus" class="brand-logo">
+            <img src="https://pngimg.com/uploads/bmw_logo/bmw_logo_PNG19705.png" alt="BMW" class="brand-logo">
+            <img src="https://pngimg.com/d/lexus_PNG57.png" alt="Lexus" class="brand-logo">
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section section-dark">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Years Established</h3>
+                <div class="stat-number">40+</div>
+                <p>Delivering excellence since 1980</p>
+            </div>
+            <div class="stat-card">
+                <h3>Vehicles Sold</h3>
+                <div class="stat-number">5,000+</div>
+                <p>Satisfied customers worldwide</p>
+            </div>
+            <div class="stat-card">
+                <h3>Brands Available</h3>
+                <div class="stat-number">20+</div>
+                <p>From economy to hypercars</p>
+            </div>
+            <div class="stat-card">
+                <h3>Showrooms</h3>
+                <div class="stat-number">12</div>
+                <p>Across 3 continents</p>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section section-dark">
+    <section id="about" class="section">
         <h2 class="section-title">Our Legacy</h2>
         <div class="about-content">
             <div class="about-text">
                 <h3>40+ Years of Automotive Excellence</h3>
-                <p>Founded in <span style="color: #d4af37;" >1980 by Daniel Aduayi</span>, Daniel Auto Dealer began as a small family-owned business with a passion for quality vehicles. What started as a simple used car lot has grown into one of the most respected dealerships in the world.</p>
-                <p>Our founder's vision was simple: treat every customer like family and never fail on quality. These principles still guide us today as we continue to serve generations of satisfied customers.</p>
-                <p>We specialize in luxury imports,<span style="color: #d4af37;" >hihg prforming vecheles</span>, and premium SUVs, with each vehicle undergoing our rigorous 150-point inspection process before being offered to our clients.</p>
-                <p>In our inventory you'll find high-class cars with extraordinary luxury. We offer vehicles to fit any family, whether it's a family of 3 or 6. We're proud to be an authorized dealer for multiple brands including Lamborghini, Ferrari, Porsche and many more.</p>
+                <p>Founded in <span style="color: #d4af37;">1980 by Daniel Aduayi</span>, Daniel Auto Dealer began as a small family-owned business with a passion for quality vehicles. What started as a simple used car lot has grown into one of the most respected dealerships in the world.</p>
+                
+                <div class="video-container">
+                    <video controls poster="showroom-poster.jpg">
+                        <source src="showroom-tour.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <p>We specialize in luxury imports, <span style="color: #d4af37;">high performing vehicles</span>, and premium SUVs, with each vehicle undergoing our rigorous 150-point inspection process before being offered to our clients.</p>
                 <a href="about.html" class="btn">Learn More About Us</a>
             </div>
             <div class="about-image">
@@ -98,18 +204,34 @@
         </div>
     </section>
 
-
+    <!-- Testimonial Video -->
+    <section class="section section-dark">
+        <h2 class="section-title">Client Experiences</h2>
+        <div class="video-container">
+            <video controls poster="testimonial-poster.jpg">
+                <source src="client-testimonial.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
     
     <!-- Footer -->
     <footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="https://youtube.com" target="_blank" class="social-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="social-icon">
+                <span>YouTube</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" class="social-icon">
+                <span>Twitter</span>
+            </a>
+        </div>
         <div class="copyright">
             <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
         </div>
-    </footer>
-    <script>
-    function greetUser() {
-    alert("Welcome to Daniel Auto Dealer! Experience luxury like never before.");
-    }
-</script>
+    </div>
+</footer>
 </body>
 </html>

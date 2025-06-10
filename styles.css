@@ -4,16 +4,14 @@ body {
     font-family: Arial, sans-serif; /* Sans-serif, web-safe */
     line-height: 1.6;/* better readability */
     color: #ffffff;/* sets the plain white text colour */
-    background-color: #000000;/* black background colour for dark themed page */
-    opacity: 0;/* no opacity for background */
-    animation: fadeIn 1.2s ease-in-out forwards;/* cool animation*/
+    background: linear-gradient(to right, #000000, #333333);/* black background colour for dark themed page */
+    visibility: hidden;
+    animation: fadeIn 1.2s ease-in-out forwards;
     letter-spacing: 0.5px;/* letter spacing for smooth reading */
     word-spacing: 1px;/* space arund words for readability principles*/
 }
 
-@keyframes fadeIn {
-    to { opacity: 1; } /* Fade in effect */
-}
+
 
 /* Paragraphs */
 p {
@@ -215,6 +213,36 @@ p {
     font-size: 1rem;
     line-height: 1.6;
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; visibility: visible; }
+}
+
+/* Smooth hover transition for nav links */
+.nav-links a {
+    transition: transform 0.2s ease;
+}
+.nav-links a:hover {
+    transform: translateY(-2px); /* Slight upward lift */
+}
+
+/* Gentle button hover effect */
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Subtle image hover */
+.about-image img {
+    transition: transform 0.4s ease;
+}
+.about-image img:hover {
+    transform: scale(1.03); /* Very slight zoom */
+}
+
 
 /* ===== Responsive Layout ===== */
 @media (max-width: 768px) {
