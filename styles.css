@@ -191,6 +191,35 @@ footer {
     padding: 30px;
     border-top: 1px solid #d4af37;
 }
+ .social-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+        color: #d4af37;
+        transform: translateY(-3px);
+    }
+    
+    .social-icon {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+    }
+    
+    .social-link:hover .social-icon {
+        transform: scale(1.2);
+    }
+     .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
 
 /* Typography Styling */
 h1, h2, h3 {
