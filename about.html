@@ -6,6 +6,7 @@
     <title>About Us | Daniel Auto Dealer | Premium Vehicles Since 1980</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        
     .shot-7 {
         width: 50%;
         height: auto;
@@ -28,9 +29,67 @@
         max-width: 800px;
     }
     
-    .highlight {
-        color: #d4af37;
+    .services-container, .team-grid, .awards-grid, .testimonial-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
+    
+    .service-card, .team-member, .award, .testimonial {
+        flex: 1 1 300px;
+        padding: 20px;
+    }
+    
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-content {
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    .copyright {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    /* Basic typography improvements */
+    body {
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3 {
+        line-height: 1.2;
+    }
+    
+    .service-card ul, .about-text {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    blockquote {
+        font-style: italic;
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+    </style>
     </style>
 </head>
 <body>
@@ -50,7 +109,7 @@
     <section id="home" class="hero">
         <img class="hero-video" src="dealer.png" alt="Daniel Auto Dealer showroom"> 
         <div class="hero-content">
-            <h1>Our Story of <span class="highlight">Automotive Excellence</span></h1>
+            <h1>Our Story of Automotive Excellence</h1>
             <p>Four decades of passion, precision, and unparalleled service in luxury automotive sales</p>
             <a href="inventory.html" class="btn">Explore Our Collection</a>
         </div>
@@ -62,19 +121,19 @@
         <div class="about-content">
             <div class="about-text">
                 <h3>The Daniel Auto Dealer Difference</h3>
-                <p>Founded in <span class="highlight">1980</span> by auto maker Daniel Aduayi, Daniel Auto Dealer began as a small family-run dealership with a big dream: to redefine luxury car buying. What started as a modest operation with just five vehicles has grown into one of the most respected names in premium automotive retail.</p>
+                <p>Founded in 1980 by auto maker Daniel Aduayi, Daniel Auto Dealer began as a small family-run dealership with a big dream: to redefine luxury car buying. What started as a modest operation with just five vehicles has grown into one of the most respected names in premium automotive retail, with showrooms across three states and an international empire.</p>
 
                 <h3>Our Philosophy</h3>
-                <p>We believe that buying a luxury vehicle should be as exceptional as the vehicle itself. Our approach combines old-world hospitality with cutting-edge technology to create a seamless, personalized experience.</p>
+                <p>We believe that buy a luxury vehicle should be as awesome as the vehicle itself. Our approach combines old-world hospitality with cutting-edge technology to create a seamless, personalized experience for every client. Unlike typical dealerships, we focus on building lifelong relationships rather than making one-time sales.</p>
                 
                 <h3>Our Inventory</h3>
-                <p>Our carefully curated selection represents the pinnacle of automotive engineering. As an authorized dealer for <span class="highlight">15+ luxury brands</span>, we maintain an inventory of 150-200 vehicles at any time.</p>
+                <p>Our carefully curated selection represents the pinnacle of automotive engineering and design. As an authorized dealer for over 15 luxury brands including Lamborghini, Ferrari, Porsche, Rolls-Royce, and Bentley, we maintain an inventory of 150-200 vehicles at any time. Each undergoes our rigorous 150-point certification process to ensure it meets our exacting standards.</p>
                 
                 <h3>Brand Partnerships</h3>
-                <p>Our relationships with manufacturers give us access to exclusive models and custom configurations unavailable through most dealers.</p>
+                <p>Our longstanding relationships with manufacturers give us access to exclusive models, limited editions, and custom configurations unavailable through most dealers. We're proud to be one of only 12 dealers nationwide with Ferrari's "Prestige" designation and Lamborghini's "Ad Personam" customization program.</p>
                 
                 <h3>Our Team</h3>
-                <p>Our 45-person team includes factory-trained technicians and sales consultants with an average of 12 years industry experience.</p>
+                <p>Our 45-person team includes factory-trained technicians, master detailers, and sales consultants with an average of 12 years industry experience. Many of our staff hold manufacturer certifications from BMW, Mercedes-Benz, and Porsche, ensuring expert knowledge of every vehicle we sell.</p>
             </div>
         </div>
     </section>
@@ -85,23 +144,31 @@
         <div class="timeline">
             <div class="timeline-event">
                 <h3>1980</h3>
-                <p>Daniel Aduayi opens the original dealership with just 5 vehicles</p>
+                <p>Daniel Aduayi opens the original dealership in downtown Chicago with just 5 pre-owned luxury vehicles</p>
             </div>
             <div class="timeline-event">
                 <h3>1987</h3>
-                <p>Earns first manufacturer certification (Mercedes-Benz)</p>
+                <p>Earns first manufacturer certification (Mercedes-Benz) and becomes an authorized dealer</p>
             </div>
             <div class="timeline-event">
                 <h3>1995</h3>
-                <p>Opens second location in Miami</p>
+                <p>Opens second location in Miami, specializing in exotic and high-performance vehicles</p>
             </div>
             <div class="timeline-event">
                 <h3>2002</h3>
-                <p>Launches industry-leading 150-point certification program</p>
+                <p>Launches the industry-leading 150-point certification program for pre-owned vehicles</p>
             </div>
             <div class="timeline-event">
                 <h3>2010</h3>
-                <p>Receives Ferrari's "Prestige" designation</p>
+                <p>Receives Ferrari's "Prestige" designation for exceptional sales and service</p>
+            </div>
+            <div class="timeline-event">
+                <h3>2018</h3>
+                <p>Expands to Beverly Hills location, tripling showroom space and adding concierge services</p>
+            </div>
+            <div class="timeline-event">
+                <h3>2025</h3>
+                <p>Celebrates 5,000 vehicles sold with record customer satisfaction scores</p>
             </div>
         </div>
     </section>
@@ -111,27 +178,31 @@
         <h2 class="section-title">Meet Our Leadership</h2>
         <div class="team-grid">
             <div class="team-member">
-                <h3>Daniel Aduayi</h3>
-                <p class="title">Founder & CEO</p>
-                <p>With 43 years in the luxury auto industry, Daniel's vision continues to guide our company.</p>
+    <h3>Daniel Aduayi</h3>
+    <p class="title">Founder & CEO</p>
+    <p>With 43 years in the luxury auto industry, Daniel's vision continues to guide our company. His famous saying: "Sell the experience, not just the car."</p>
+</div>
+
             </div>
             <div class="team-member">
-                <h3>Ashley Hoitink</h3>
+                <h3>Ashley hoitink</h3>
                 <p class="title">President & COO</p>
-                <p>Former Porsche executive who revolutionized our operations.</p>
+                <p>Former Porsche North America executive who joined in 2012, revolutionizing our operations and customer service processes.</p>
             </div>
             <div class="team-member">
                 <h3>Michael Rodriguez</h3>
                 <p class="title">Director of Sales</p>
-                <p>20-year veteran who personally oversees our sales team and client relationships.</p>
+                <p>20-year veteran who personally oversees our sales team and client relationships, with expertise in exotic and limited-edition vehicles.</p>
             </div>
             <div class="team-member">
                 <h3>David Park</h3>
                 <p class="title">Master Technician</p>
-                <p>One of only 12 technicians in the U.S. certified by Ferrari, Lamborghini, and McLaren.</p>
+                <p>One of only 12 technicians in the U.S. certified by Ferrari, Lamborghini, and McLaren, ensuring every vehicle meets exacting standards.</p>
             </div>
         </div>
     </section>
+
+
 
     <!-- Testimonial Section -->
     <section id="testimonials" class="section">
@@ -145,25 +216,19 @@
                 <blockquote>"The team found me an exact-spec 911 GT3 when no one else could. Two years later, they still remember my preferences when I call."</blockquote>
                 <p>- Michelle Rodriguez, Tech Entrepreneur</p>
             </div>
+            <div class="testimonial">
+                <blockquote>"As a first-time exotic buyer, I was nervous. Michael spent 6 hours educating me without pressure. That's why I bought my Aventador from them."</blockquote>
+                <p>- Thomas Chen, Professional Athlete</p>
+            </div>
         </div>
     </section>
 
+
+
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="https://youtube.com" target="_blank" class="social-link">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="social-icon">
-                    <span>YouTube</span>
-                </a>
-                <a href="https://twitter.com" target="_blank" class="social-link">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" class="social-icon">
-                    <span>Twitter</span>
-                </a>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
-            </div>
+        <div class="copyright">
+            <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
         </div>
     </footer>
 </body>
