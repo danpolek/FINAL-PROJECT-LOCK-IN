@@ -10,12 +10,16 @@ body {
     letter-spacing: 0.5px;/* letter spacing for smooth reading */
     word-spacing: 1px;/* space arund words for readability principles*/
 }
-
+html {
+    scroll-behavior: smooth;
+}
 
 
 /* Paragraphs */
 p {
-    color: white;/* changes paragraph colour for all p tags */
+    p {
+    color: #cccccc; /* Softer gray for better contrast on dark bg */
+}
     margin-bottom: 15px;/* layer in the paragraphs */
 }
 
@@ -45,6 +49,8 @@ p {
     text-decoration: none;/* removes the underline */
     font-weight: 500;/* makes it bold */
     transition: color 0.3s ease-in-out;/* hover transition */
+    
+    font-size: 1.1rem; /* Slightly larger for nav */
 }
 
 .nav-links a:hover {
@@ -138,7 +144,7 @@ p {
 }
 
 .about-text p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;/* space between paragraphs */
     color: #cccccc;/* gray text */
     line-height: 1.6;/* line height for readability */
 }
@@ -175,6 +181,7 @@ p {
     font-weight: 500;
     border: 1px solid #d4af37;
     transition: all 0.5s;
+       font-size: 1.1rem; /* Consistent button text */
 }
 
 .btn:hover {
@@ -217,6 +224,7 @@ footer {
      .footer-links {
         display: flex;
         justify-content: center;
+         flex-wrap: wrap; /* Better mobile behavior */
         gap: 30px;
         margin-bottom: 20px;
     }
@@ -224,6 +232,8 @@ footer {
 /* Typography Styling */
 h1, h2, h3 {
     font-family: 'Arial', sans-serif; /* Consistent sans-serif */
+     font-weight: 600; /* Semi-bold */
+    margin-bottom: 0.75em;
 }
 
 h1 {
@@ -258,10 +268,12 @@ p {
 /* Gentle button hover effect */
 .btn {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .btn:hover {
-    transform: translateY(-3px);
+
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+
 }
 
 /* Subtle image hover */
@@ -271,6 +283,7 @@ p {
 .about-image img:hover {
     transform: scale(1.03); /* Very slight zoom */
 }
+
 
 
 /* ===== Responsive Layout ===== */
