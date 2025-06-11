@@ -1,141 +1,152 @@
-<!DOCTYPE html> <!-- Declares document as HTML5 -->
-<html lang="en"> <!-- Sets the language to English -->
+<!DOCTYPE html> 
+<!-- HTML5 document type declaration -->
+<html lang="en"> 
+<!-- Root element with language set to English -->
 <head>
-    <meta charset="UTF-8"> <!-- Character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness on all devices -->
-    <title>Daniel Auto Dealer | Premium Vehicles Since 1980</title> <!-- Webpage title -->
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <!-- Document metadata and resources -->
+    <meta charset="UTF-8"> 
+    <!-- Character encoding for proper text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Responsive viewport settings -->
+    <title>Daniel Auto Dealer | Premium Vehicles Since 1980</title> 
+    <!-- Page title that appears in browser tab -->
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- External CSS stylesheet link -->
     <style>
+        /* Embedded CSS styles for this document */
+        
         /* Styling for image in About section */
         .shot-7 {
-            width: 100%;/* full width span*/
-            max-width: 600px;/* maxwidth is 600px*/
-            height: auto;/* original height*/
-            border-radius: 10px;
-            border: 2px solid #d4af37; /* Gold border */
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); /* Soft gold shadow */
-            transition: transform 0.3s ease;
+            width: 100%; /* Full width of container */
+            max-width: 600px; /* Maximum width constraint */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+            border: 2px solid #d4af37; /* Gold-colored border */
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); /* Subtle shadow effect */
+            transition: transform 0.3s ease; /* Smooth transform animation */
         }
 
-        /* Hover effect for image */
+        /* Hover effect for the about section image */
         .shot-7:hover {
-            transform: scale(1.02);/* basic hover effect*/
+            transform: scale(1.02); /* Slight zoom on hover */
         }
 
-        /* Flex container for brand logos */
+        /* Container for brand logos display */
         .featured-brands {
-            display: flex;/* activets flexbx*/
-            justify-content: space-around;/* flexbox*/
-            flex-wrap: wrap;
-            margin: 40px 0;
-            padding: 20px;
-            background: linear-gradient(to right, #000000, #1a1a1a, #333333);
-            border-radius: 10px;
-            border: 1px solid #d4af37;
+            display: flex; /* Flexbox layout */
+            justify-content: space-around; /* Even space distribution */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            margin: 40px 0; /* Vertical margins */
+            padding: 20px; /* Inner spacing */
+            background: linear-gradient(to right, #000000, #1a1a1a, #333333); /* Gradient background */
+            border-radius: 10px; /* Rounded corners */
+            border: 1px solid #d4af37; /* Gold border */
         }
 
-        /* Brand logo image styling */
+        /* Styling for individual brand logos */
         .brand-logo {
-            width: 120px;/* small size*/
-            height: 80px;/*little height */
-            object-fit: contain;
-            margin: 15px;
-            filter: grayscale(30%) brightness(0.9); /* dull tone */
-            transition: all 0.3s ease;
+            width: 120px; /* Fixed width */
+            height: 80px; /* Fixed height */
+            object-fit: contain; /* Maintain aspect ratio */
+            margin: 15px; /* Spacing around logos */
+            filter: grayscale(30%) brightness(0.9); /* Partial grayscale effect */
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
         }
 
         /* Hover effects for brand logos */
         .brand-logo:hover {
-            filter: grayscale(0%) brightness(1.1); /* full color + bright */
-            transform: scale(1.1);
+            filter: grayscale(0%) brightness(1.1); /* Full color and brightness */
+            transform: scale(1.1); /* Slight enlargement */
         }
 
         /* Container for embedded videos */
         .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 40px auto;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 2px solid #d4af37;
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+            position: relative; /* Positioning context */
+            width: 100%; /* Full width */
+            max-width: 800px; /* Maximum width constraint */
+            margin: 40px auto; /* Centered with vertical spacing */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Hide overflow content */
+            border: 2px solid #d4af37; /* Gold border */
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); /* Shadow effect */
         }
 
-        /* Video sizing */
+        /* Video element styling */
         .video-container video {
-            width: 100%;
-            display: block;
+            width: 100%; /* Full width of container */
+            display: block; /* Block-level element */
         }
 
-        /* Grid layout for stats */
+        /* Grid layout for statistics cards */
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
+            display: grid; /* CSS Grid layout */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+            gap: 20px; /* Spacing between grid items */
+            margin: 40px 0; /* Vertical margins */
         }
 
-        /* Individual stat cards */
+        /* Styling for individual statistic cards */
         .stat-card {
-            background: rgba(26, 26, 26, 0.7);
-            border: 1px solid #d4af37;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
+            background: rgba(26, 26, 26, 0.7); /* Semi-transparent background */
+            border: 1px solid #d4af37; /* Gold border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Inner spacing */
+            text-align: center; /* Centered content */
+            transition: transform 0.3s ease; /* Smooth transform animation */
         }
 
         /* Hover effect for stat cards */
         .stat-card:hover {
-            transform: translateY(-5px);
-            background: rgba(26, 26, 26, 0.9);
+            transform: translateY(-5px); /* Lift effect */
+            background: rgba(26, 26, 26, 0.9); /* Darker background on hover */
         }
 
-        /* Stat numbers styling */
+        /* Styling for the large statistic numbers */
         .stat-number {
-            font-size: 2.5rem;
-            color: #d4af37;
-            margin: 10px 0;
-            font-weight: bold;
+            font-size: 2.5rem; /* Large text size */
+            color: #d4af37; /* Gold color */
+            margin: 10px 0; /* Vertical margins */
+            font-weight: bold; /* Bold text */
         }
     </style>
 </head>
 
 <body>
+    <!-- Main page content begins -->
+    
     <!-- Site Header and Navigation -->
     <header>
         <nav class="navbar">
-            <div class="logo">Daniel-Auto</div> <!-- Logo text -->
+            <div class="logo">Daniel-Auto</div> <!-- Company logo text -->
             <div class="nav-links">
-                <a href="index.html">Home</a> <!-- Link to Home -->
-                <a href="about.html">About Us</a> <!-- Link to About Us -->
-                <a href="inventory.html">Inventory</a> <!-- Link to Inventory -->
-                <a href="contact.html">Contact</a> <!-- Link to Contact -->
+                <a href="index.html">Home</a> <!-- Navigation link to Home -->
+                <a href="about.html">About Us</a> <!-- Navigation link to About -->
+                <a href="inventory.html">Inventory</a> <!-- Navigation link to Inventory -->
+                <a href="contact.html">Contact</a> <!-- Navigation link to Contact -->
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section with Video -->
+    <!-- Hero Section with Background Video -->
     <section id="home" class="hero">
+        <!-- Background video element -->
         <video class="hero-video" autoplay muted loop playsinline>
-            <!-- Video used as background -->
-            <source src="advert.mp4" type="video/webm">
-            <source src="advert.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            <source src="advert.mp4" type="video/webm"> <!-- WebM format -->
+            <source src="advert.mp4" type="video/mp4"> <!-- MP4 format -->
+            Your browser does not support the video tag. <!-- Fallback text -->
         </video>
         <div class="hero-content">
-            <h1>Premium Vehicles Since 1980</h1>
-            <p>Experience the Daniel Auto Dealer difference with our hand-picked selection of luxury and performance vehicles</p>
-            <a href="inventory.html" class="btn">View Our Collection</a>
+            <h1>Premium Vehicles Since 1980</h1> <!-- Main headline -->
+            <p>Experience the Daniel Auto Dealer difference with our hand-picked selection of luxury and performance vehicles</p> <!-- Subheading -->
+            <a href="inventory.html" class="btn">View Our Collection</a> <!-- Call-to-action button -->
         </div>
     </section>
 
     <!-- Featured Brands Section -->
     <section class="section">
-        <h2 class="section-title">Trusted by the World's Finest Automakers</h2>
+        <h2 class="section-title">Trusted by the World's Finest Automakers</h2> <!-- Section title -->
         <div class="featured-brands">
-            <!-- Logos of famous car brands -->
+            <!-- Collection of brand logo images -->
             <img src="http://pngimg.com/uploads/lamborghini/lamborghini_PNG10709.png" alt="Lamborghini" class="brand-logo">
             <img src="https://logos-world.net/wp-content/uploads/2020/04/Nissan-Logo-2001-present.png" alt="Nissan" class="brand-logo">
             <img src="https://purepng.com/public/uploads/large/porsche-logo-transparent-background-poc.png" alt="Porsche" class="brand-logo">
@@ -147,24 +158,27 @@
 
     <!-- Company Statistics Section -->
     <section class="section section-dark">
-        <h2 class="section-title">Our Stats</h2>
+        <h2 class="section-title">Our Stats</h2> <!-- Section title -->
         <div class="stats-grid">
-            <!-- Each stat card -->
+            <!-- Years Established stat card -->
             <div class="stat-card">
                 <h3>Years Established</h3>
                 <div class="stat-number">40+</div>
                 <p>Delivering excellence since 1980</p>
             </div>
+            <!-- Vehicles Sold stat card -->
             <div class="stat-card">
                 <h3>Vehicles Sold</h3>
                 <div class="stat-number">5,000+</div>
                 <p>Satisfied customers worldwide</p>
             </div>
+            <!-- Brands Available stat card -->
             <div class="stat-card">
                 <h3>Brands Available</h3>
                 <div class="stat-number">10+</div>
                 <p>From economy to hypercars</p>
             </div>
+            <!-- Showrooms stat card -->
             <div class="stat-card">
                 <h3>Showrooms</h3>
                 <div class="stat-number">12</div>
@@ -173,21 +187,21 @@
         </div>
     </section>
 
-    <!-- About Section with Video and Image -->
+    <!-- About Section with Company History -->
     <section id="about" class="section">
-        <h2 class="section-title">Our Legacy</h2>
+        <h2 class="section-title">Our Legacy</h2> <!-- Section title -->
         <div class="about-content">
             <div class="about-text">
-                <h3>40+ Years of Automotive Excellence</h3>
+                <h3>40+ Years of Automotive Excellence</h3> <!-- Subheading -->
                 <p>Founded in <span style="color: #d4af37;">1980 by Daniel Aduayi</span>, Daniel Auto Dealer began as a small family-owned business with a passion for quality vehicles. What started as a simple used car lot has grown into one of the most respected dealerships in the world.</p>
                 
-                <!-- Embedded YouTube video -->
+                <!-- Embedded YouTube video container -->
                 <div class="video-container">
                     <iframe width="600" height="315" src="https://www.youtube.com/embed/q5VqDhbE5gI?si=LWMCZyMd088oFaFC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 
                 <p>We specialize in luxury imports, <span style="color: #d4af37;">high performing vehicles</span>, and premium SUVs, with each vehicle undergoing our rigorous 150-point inspection process before being offered to our clients.</p>
-                <a href="about.html" class="btn">Learn More About Us</a>
+                <a href="about.html" class="btn">Learn More About Us</a> <!-- Call-to-action button -->
             </div>
             <div class="about-image">
                 <!-- Showroom image -->
@@ -196,11 +210,11 @@
         </div>
     </section>
 
-    <!-- Second YouTube Video Section -->
+    <!-- Second Video Section -->
     <section class="section section-dark">
-        <h2 class="section-title">New Car Shipments</h2>
+        <h2 class="section-title">New Car Shipments</h2> <!-- Section title -->
         <div class="video-container">
-            <!-- Second video embed -->
+            <!-- Second embedded YouTube video -->
             <iframe width="800" height="315" src="https://www.youtube.com/embed/d9RfHldPkDs?si=-_LSqKmg5mE_n-Ub" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
@@ -208,13 +222,14 @@
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-        
+            <!-- Footer links section -->
             <div class="footer-links">
-                <p style="color:#d4af37;"><strong> Sources:</strong></p>
-                <p><a href="https://www.youtube.com/watch?v=q5VqDhbE5gI" target="_blank" style="color:white;">Legacy Video - https://www.youtube.com/watch?v=q5VqDhbE5gI</a></p>
-                <p><a href="https://www.youtube.com/watch?v=d9RfHldPkDs" target="_blank" style="color:white;">New Shipments - https://www.youtube.com/watch?v=d9RfHldPkDs</a></p>
-                <p>images and landing video are Ai generated</p>
+                <p style="color:#d4af37;"><strong> Sources:</strong></p> <!-- Sources heading -->
+                <p><a href="https://www.youtube.com/watch?v=q5VqDhbE5gI" target="_blank" style="color:white;">Legacy Video - https://www.youtube.com/watch?v=q5VqDhbE5gI</a></p> <!-- Video source link -->
+                <p><a href="https://www.youtube.com/watch?v=d9RfHldPkDs" target="_blank" style="color:white;">New Shipments - https://www.youtube.com/watch?v=d9RfHldPkDs</a></p> <!-- Video source link -->
+                <p>images and landing video are Ai generated</p> <!-- Image source note -->
             </div>
+            <!-- Social media links -->
             <div class="footer-links">
                 <a href="https://youtube.com" target="_blank" class="social-link">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="social-icon">
@@ -225,7 +240,7 @@
                     <span>Twitter</span>
                 </a>
             </div>
-            <!-- Copyright -->
+            <!-- Copyright notice -->
             <div class="copyright">
                 <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
             </div>
@@ -233,4 +248,3 @@
     </footer>
 </body>
 </html>
-
