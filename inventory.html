@@ -1,289 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- External stylesheet link -->
     <link rel="stylesheet" href="styles.css">
     <style>
-    .vehicle-card {
+    /* Vehicle card grid styling */
+/* Vehicle card container - sets layout for multiple cards */
+.vehicle-card {
     max-width: 100%;
     width: 100%;
     margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
     gap: 30px;
     padding: 0 20px;
 }
 
+/* General image styling - makes all images fill their containers */
 img {
     width: 100%;
     height: 100%;
 }
 
+/* Inventory grid container - arranges vehicle cards in a responsive grid */
 .inventory-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Ensures a responsive layout */
+    gap: 40px; /* Space between cards */
     padding: 0 20px;
 }
-    .section-title {
+
+/* Section title - center aligned, large golden title */
+.section-title {
     text-align: center;
     font-size: 2.5em;
-    color: #e6b800;
+    color: #e6b800; /* Gold color for luxury feel */
     margin-bottom: 10px;
-    }
+}
 
-    .section p {
+/* Section paragraph - center aligned, light color, max width for readability */
+.section p {
     text-align: center;
     margin: 0 auto 40px;
     max-width: 800px;
-    color: #ccc;
-    }
+    color: #ccc; /* Light grey for readability on dark background */
+}
 
-    .inventory-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    padding: 0 20px;
-    }
+/* Vehicle card - dark background, rounded corners, hover animation */
+.vehicle-card {
+    background-color: #1a1a1a; /* Dark luxury theme */
+    border-radius: 16px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow (like images) */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1); /* Subtle gold shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
 
-    .vehicle-card {
-    background-color: #1a1a1a;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* Vehicle card on hover - lift card and glow */
+.vehicle-card:hover {
+    transform: translateY(-8px); /* Lift up */
+    box-shadow: 0 0 30px rgb(255, 217, 0); /* Stronger gold glow */
+}
 
-    .vehicle-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 30px rgb(255, 217, 0);
-    }
-
-    .vehicle-image img {
+/* Vehicle image styling - fixed height and cropped */
+.vehicle-image img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
-    }
+    height: 220px; /* Fixed height for uniformity */
+    object-fit: cover; /* Crop image to fill */
+}
 
-    .vehicle-info {
-    padding: 20px;
-    }
+/* Vehicle info section - spacing inside the card */
+.vehicle-info {
+    padding: 20px; /* Space around text inside card */
+}
 
-    
+/* Vehicle info paragraphs - spacing between lines of info */
+.vehicle-info p {
+    margin-bottom: 10px; /* Space below each paragraph */
+}
 
-    .vehicle-info p {
-    margin-bottom: 10px;
-    }
 
     </style>
 </head>
 
 <body>
-    <header>
-    <nav class="navbar">
-        <div class="logo">Daniel-Auto</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="inventory.html">Inventory</a>
-            <a href="contact.html">Contact</a>
+    <!-- Main header with navigation -->
+    <header tabindex="0">
+    <nav class="navbar" tabindex="0">
+        <div class="logo" tabindex="0">Daniel-Auto</div>
+        <div class="nav-links" tabindex="0">
+            <a href="index.html" tabindex="0">Home</a>
+            <a href="about.html" tabindex="0">About Us</a>
+            <a href="inventory.html" tabindex="0">Inventory</a>
+            <a href="contact.html" tabindex="0">Contact</a>
         </div>
     </nav>
     </header>
     
     <!-- Inventory Section -->
-    <section id="inventory" class="section">
-        <h2 class="section-title">Featured Inventory</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Browse our curated selection of premium vehicles. Each car in our inventory meets our strict quality standards and comes with a comprehensive warranty.</p>
+    <section id="inventory" class="section" tabindex="0">
+        <h2 class="section-title" tabindex="0">Featured Inventory</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;" tabindex="0">Browse our curated selection of premium vehicles. Each car in our inventory meets our strict quality standards and comes with a comprehensive warranty.</p>
         
-        <!-- Only replacing inner content for each car below -->
-<div class="inventory-grid">
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Mercedes-Benz_W223_IMG_6663.jpg" alt="Luxury Sedan">
-        </div>
-        <div class="vehicle-info">
-            <h3>2023 Mercedes-Benz S-Class</h3>
-            <p>Flagship luxury sedan featuring advanced tech and first-class comfort.</p>
-            <p><strong>Price:</strong> $114,500</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+        <!-- Inventory grid container -->
+        <div class="inventory-grid" tabindex="0">
+            <!-- Vehicle card 1 - Mercedes-Benz S-Class -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Mercedes-Benz_W223_IMG_6663.jpg" alt="Luxury Sedan" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2023 Mercedes-Benz S-Class</h3>
+                    <p tabindex="0">Flagship luxury sedan featuring advanced tech and first-class comfort.</p>
+                    <p tabindex="0"><strong>Price:</strong> $114,500</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sports Car">
-        </div>
-        <div class="vehicle-info">
-            <h3>2022 Porsche 911 Turbo</h3>
-            <p>Iconic sports car with blistering speed and everyday usability.</p>
-            <p><strong>Price:</strong> $165,500</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 2 - Porsche 911 Turbo -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sports Car" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2022 Porsche 911 Turbo</h3>
+                    <p tabindex="0">Iconic sports car with blistering speed and everyday usability.</p>
+                    <p tabindex="0"><strong>Price:</strong> $165,500</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://media.ed.edmunds-media.com/land-rover/range-rover/2022/oem/2022_land-rover_range-rover_4dr-suv_p530-autobiography-lwb-5_fq_oem_1_1600.jpg" alt="Luxury SUV">
-        </div>
-        <div class="vehicle-info">
-            <h3>2023 Range Rover Autobiography</h3>
-            <p>Top-tier SUV offering luxurious materials and off-road capabilities.</p>
-            <p><strong>Price:</strong> $142,000</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 3 - Range Rover Autobiography -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://media.ed.edmunds-media.com/land-rover/range-rover/2022/oem/2022_land-rover_range-rover_4dr-suv_p530-autobiography-lwb-5_fq_oem_1_1600.jpg" alt="Luxury SUV" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2023 Range Rover Autobiography</h3>
+                    <p tabindex="0">Top-tier SUV offering luxurious materials and off-road capabilities.</p>
+                    <p tabindex="0"><strong>Price:</strong> $142,000</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://www.mclarenranchomirage.com/blogs/1357/wp-content/uploads/2018/11/McLaren-Speedtail-1.jpg" alt="Hypercar">
-        </div>
-        <div class="vehicle-info">
-            <h3>2020 McLaren Speedtail</h3>
-            <p>Hybrid hyper-GT with a 250+ mph top speed and futuristic design.</p>
-            <p><strong>Price:</strong> $2,250,000</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 4 - McLaren Speedtail -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://www.mclarenranchomirage.com/blogs/1357/wp-content/uploads/2018/11/McLaren-Speedtail-1.jpg" alt="Hypercar" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2020 McLaren Speedtail</h3>
+                    <p tabindex="0">Hybrid hyper-GT with a 250+ mph top speed and futuristic design.</p>
+                    <p tabindex="0"><strong>Price:</strong> $2,250,000</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://news.dupontregistry.com/wp-content/uploads/2023/12/2010-lamborghini-murcielago-7949-915x570.jpg" alt="Supercar">
-        </div>
-        <div class="vehicle-info">
-            <h3>2010 Lamborghini Murciélago</h3>
-            <p>V12-powered Italian supercar with aggressive styling and raw power.</p>
-            <p><strong>Price:</strong> $350,000</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 5 - Lamborghini Murciélago -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://news.dupontregistry.com/wp-content/uploads/2023/12/2010-lamborghini-murcielago-7949-915x570.jpg" alt="Supercar" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2010 Lamborghini Murciélago</h3>
+                    <p tabindex="0">V12-powered Italian supercar with aggressive styling and raw power.</p>
+                    <p tabindex="0"><strong>Price:</strong> $350,000</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://www.mad4wheels.com/img/free-car-images/mobile/10561/lamborghini-gallardo-lp570-4-superleggera-green-beret-by-wheelsandmore-2012-347089.jpg" alt="Supercar">
-        </div>
-        <div class="vehicle-info">
-            <h3>2012 Lamborghini Gallardo Superleggera</h3>
-            <p>Lightweight performance edition with enhanced aerodynamics and V10 engine.</p>
-            <p><strong>Price:</strong> $210,000</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 6 - Lamborghini Gallardo Superleggera -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://www.mad4wheels.com/img/free-car-images/mobile/10561/lamborghini-gallardo-lp570-4-superleggera-green-beret-by-wheelsandmore-2012-347089.jpg" alt="Supercar" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2012 Lamborghini Gallardo Superleggera</h3>
+                    <p tabindex="0">Lightweight performance edition with enhanced aerodynamics and V10 engine.</p>
+                    <p tabindex="0"><strong>Price:</strong> $210,000</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://cdn.rmsothebys.com/3/2/0/a/6/8/320a681d2f1c3b84992a466d7888009ddec45bc4.webp" alt="Vintage Car">
-        </div>
-        <div class="vehicle-info">
-            <h3>lexus LFA</h3>
-            <p>Iconic collector's car known for its gullwing doors and heritage.</p>
-            <p><strong>Price:</strong> $1,800,000</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 7 - Lexus LFA -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://cdn.rmsothebys.com/3/2/0/a/6/8/320a681d2f1c3b84992a466d7888009ddec45bc4.webp" alt="Vintage Car" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">lexus LFA</h3>
+                    <p tabindex="0">Iconic collector's car known for its gullwing doors and heritage.</p>
+                    <p tabindex="0"><strong>Price:</strong> $1,800,000</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://www.cnet.com/a/img/resize/f1c24a2e7e46b4d649123fecf2c07f914cc3c85e/hub/2020/06/23/1d2010e1-5584-4807-bacf-c391fa5d6ed4/nsx-ogi.jpg?auto=webp&fit=crop&height=675&width=1200" alt="Sports Car">
-        </div>
-        <div class="vehicle-info">
-            <h3>2020 Acura NSX</h3>
-            <p>Hybrid supercar blending Japanese engineering with electric precision.</p>
-            <p><strong>Price:</strong> $157,500</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 8 - Acura NSX -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://www.cnet.com/a/img/resize/f1c24a2e7e46b4d649123fecf2c07f914cc3c85e/hub/2020/06/23/1d2010e1-5584-4807-bacf-c391fa5d6ed4/nsx-ogi.jpg?auto=webp&fit=crop&height=675&width=1200" alt="Sports Car" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2020 Acura NSX</h3>
+                    <p tabindex="0">Hybrid supercar blending Japanese engineering with electric precision.</p>
+                    <p tabindex="0"><strong>Price:</strong> $157,500</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg" alt="Supercar">
-        </div>
-        <div class="vehicle-info">
-            <h3>2023 Lamborghini Aventador SV</h3>
-            <p>Final edition V12 Aventador with extreme design and performance.</p>
-            <p><strong>Price:</strong> $525,000</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 9 - Lamborghini Aventador SV -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg" alt="Supercar" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2023 Lamborghini Aventador SV</h3>
+                    <p tabindex="0">Final edition V12 Aventador with extreme design and performance.</p>
+                    <p tabindex="0"><strong>Price:</strong> $525,000</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://cdn.motor1.com/images/mgl/o3LB0/s1/2016-ford-flex-reivew.jpg" alt="Crossover">
-        </div>
-        <div class="vehicle-info">
-            <h3>2016 Ford Flex</h3>
-            <p>Spacious and unique crossover SUV with retro styling and V6 power.</p>
-            <p><strong>Price:</strong> $22,400</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 10 - Ford Flex -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://cdn.motor1.com/images/mgl/o3LB0/s1/2016-ford-flex-reivew.jpg" alt="Crossover" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2016 Ford Flex</h3>
+                    <p tabindex="0">Spacious and unique crossover SUV with retro styling and V6 power.</p>
+                    <p tabindex="0"><strong>Price:</strong> $22,400</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/2018_Nissan_GT-R_Premium_in_Super_Silver%2C_Front_Right%2C_10-11-2022.jpg" alt="Sports Car">
-        </div>
-        <div class="vehicle-info">
-            <h3>2018 Nissan GT-R Premium</h3>
-            <p>Japanese legend with all-wheel drive and monstrous twin-turbo V6.</p>
-            <p><strong>Price:</strong> $99,900</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
+            <!-- Vehicle card 11 - Nissan GT-R Premium -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/2018_Nissan_GT-R_Premium_in_Super_Silver%2C_Front_Right%2C_10-11-2022.jpg" alt="Sports Car" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2018 Nissan GT-R Premium</h3>
+                    <p tabindex="0">Japanese legend with all-wheel drive and monstrous twin-turbo V6.</p>
+                    <p tabindex="0"><strong>Price:</strong> $99,900</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
 
-    <div class="vehicle-card">
-        <div class="vehicle-image">
-            <img src="https://wieck-nissanao-production.s3.amazonaws.com/photos/128fc4e6fdf217287e6764c07dd58c23b3ab46af/preview-928x522.jpg" alt="Electric SUV">
+            <!-- Vehicle card 12 - Nissan Rouge -->
+            <div class="vehicle-card" tabindex="0">
+                <div class="vehicle-image" tabindex="0">
+                    <img src="https://wieck-nissanao-production.s3.amazonaws.com/photos/128fc4e6fdf217287e6764c07dd58c23b3ab46af/preview-928x522.jpg" alt="Electric SUV" tabindex="0">
+                </div>
+                <div class="vehicle-info" tabindex="0">
+                    <h3 tabindex="0">2023 Nissan rouge</h3>
+                    <p tabindex="0">Fully-electric SUV with modern design, spacious cabin, and advanced tech.</p>
+                    <p tabindex="0"><strong>Price:</strong> $53,500</p>
+                    <a href="contact.html" class="btn" tabindex="0">Schedule Test Drive</a>
+                </div>
+            </div>
         </div>
-        <div class="vehicle-info">
-            <h3>2023 Nissan rouge</h3>
-            <p>Fully-electric SUV with modern design, spacious cabin, and advanced tech.</p>
-            <p><strong>Price:</strong> $53,500</p>
-            <a href="contact.html" class="btn">Schedule Test Drive</a>
-        </div>
-    </div>
-</div>
-
-        
     </section>
 
-        <footer>
-            
-    <div class="footer-content">
-            <div class="footer-links">
-                <a href="https://youtube.com" target="_blank" class="social-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="social-icon">
-                <span>YouTube</span>
-            </a>
-            <a href="https://twitter.com" target="_blank" class="social-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" class="social-icon">
-                <span>Twitter</span>
-            </a>
+    <!-- Footer section -->
+    <footer tabindex="0">
+        <div class="footer-content" tabindex="0">
+            <div class="footer-links" tabindex="0">
+                <!-- Social media links -->
+                <a href="https://youtube.com" target="_blank" class="social-link" tabindex="0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="social-icon" tabindex="0">
+                    <span tabindex="0">YouTube</span>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-link" tabindex="0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" class="social-icon" tabindex="0">
+                    <span tabindex="0">Twitter</span>
+                </a>
 
-<div class="image-sources">
-    <h4>Image Sources</h4>
-    <ul style="font-size: 0.9em; color: #ccc; line-height: 1.5;">
-        <li><a href="https://www.cargurus.ca/Cars/l-Used-2018-Mercedes-Benz-S-Class-c27088?cgagid=29873303&cgcid=2951&px8324=p6&sourceContext=usedPaidSearchNoZip&ax8324=119123937&query=mercedes%20benz%20s%20class&matchType=p&msnKeywordId=82189790259443&msnAdId=82188734597616&networktype=o&device=c&tgtid=kwd-82189790259443:loc-32&physloc=5120&msclkid=b2e129fb1a7a1787283c41b26697b298&utm_source=bing&utm_medium=cpc&utm_campaign=Mercedes-CA-comp-en-srch-xx%20(1474)&utm_term=mercedes-benz%20s-class%202021&utm_content=2018%20S-Class%20Used-Year-Car-Used%20(29060765)" target="_blank">Mercedes-Benz S-Class</a></li>
-        <li><a href="https://www.autotrader.ca/cars/porsche/911/qc/mont-tremblant/?msclkid=4a0b3b392ec9122ffeb1537053c730e2&utm_source=bing&utm_medium=cpc&utm_campaign=ROC-SEM-EN-DYN-TIER_5-GENERIC-BING&utm_term=%2Fcars%2Fporsche%2F%20911%2F&utm_content=Dynamic%20-%20Car%20-%20Porsche%20-%20911" target="_blank">Porsche 911 Turbo</a></li>
-        <li><a href="https://www.cargurus.ca/Cars/l-Used-Land-Rover-Range-Rover-d156?cgagid=9475747&cgcid=2889&px8324=p6&sourceContext=usedPaidSearchNoZip&ax8324=118787939&query=range%20rover%20autobiography&matchType=p&msnKeywordId=82464709068878&msnAdId=82463612475141&networktype=o&device=c&tgtid=kwd-82464709068878:loc-32&physloc=5120&msclkid=4daf002547b612b6c53b686c3a38f329&utm_source=bing&utm_medium=cpc&utm_campaign=Land%20Rover-CA-comp-en-srch-xx%20(1444)&utm_term=used%20land%20rover%20rangerover%20autobiography&utm_content=Range%20Rover%20Used-Maker-Model-With-Trims%20(8667121)" target="_blank">Range Rover Autobiography</a></li>
-        <li><a href="https://cars.mclaren.com/en/ultimate-models/mclaren-speedtail" target="_blank">McLaren Speedtail</a></li>
-        <li><a href="https://fastestlaps.com/models/lamborghini-murcielago-lp-670-4-sv" target="_blank">Lamborghini Murciélago</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Lamborghini_Gallardo" target="_blank">Lamborghini Gallardo Superleggera</a></li>
-        <li><a href="https://www.lexus.ca/en/vehicles/f-models/lfa/" target="_blank">Lexus LFA</a></li>
-        <li><a href="https://www.caranddriver.com/acura/nsx" target="_blank">Acura NSX</a></li>
-        <li><a href="https://www.lamborghini.com/en-en/history/aventador-superveloce" target="_blank">Lamborghini Aventador SV</a></li>
-        <li><a href="https://shop.ford.ca/showroom?searchid=700000001051407&campaignid=71700000013194640&&msclkid=7d820a6e67e51e84c7ba6227195b8264&gclid=7d820a6e67e51e84c7ba6227195b8264&gclsrc=3p.ds&gad_source=7#/" target="_blank">Ford Flex</a></li>
-        <li><a href="https://www.vickarnissan.ca/vehicles/new/?st=asking_price,asc&view=grid&sc=new&qs=Nissan%20Kicks&utm_campaign=DB-search-car-new&TFCLID=95EAD276C352A6CE9FE369CC60C68B84&utm_source=bing&utm_medium=cpc&utm_content=568521122&utm_term=%22nissan%20kicks%20%22&msclkid=76bea07a453918dbf162c8333bc22453" target="_blank">Nissan GT-R Premium</a></li>
-        <li><a href="https://www.nissan.ca/" target="_blank">Nissan Rouge</a></li>
-    </ul>
-</div>
-
+                <!-- Image sources section -->
+                <div class="image-sources" tabindex="0">
+                    <h4 tabindex="0">Image Sources</h4>
+                    <ul style="font-size: 0.9em; color: #ccc; line-height: 1.5;" tabindex="0">
+                        <li tabindex="0"><a href="https://www.cargurus.ca/Cars/l-Used-2018-Mercedes-Benz-S-Class-c27088?cgagid=29873303&cgcid=2951&px8324=p6&sourceContext=usedPaidSearchNoZip&ax8324=119123937&query=mercedes%20benz%20s%20class&matchType=p&msnKeywordId=82189790259443&msnAdId=82188734597616&networktype=o&device=c&tgtid=kwd-82189790259443:loc-32&physloc=5120&msclkid=b2e129fb1a7a1787283c41b26697b298&utm_source=bing&utm_medium=cpc&utm_campaign=Mercedes-CA-comp-en-srch-xx%20(1474)&utm_term=mercedes-benz%20s-class%202021&utm_content=2018%20S-Class%20Used-Year-Car-Used%20(29060765)" target="_blank" tabindex="0">Mercedes-Benz S-Class</a></li>
+                        <li tabindex="0"><a href="https://www.autotrader.ca/cars/porsche/911/qc/mont-tremblant/?msclkid=4a0b3b392ec9122ffeb1537053c730e2&utm_source=bing&utm_medium=cpc&utm_campaign=ROC-SEM-EN-DYN-TIER_5-GENERIC-BING&utm_term=%2Fcars%2Fporsche%2F%20911%2F&utm_content=Dynamic%20-%20Car%20-%20Porsche%20-%20911" target="_blank" tabindex="0">Porsche 911 Turbo</a></li>
+                        <li tabindex="0"><a href="https://www.cargurus.ca/Cars/l-Used-Land-Rover-Range-Rover-d156?cgagid=9475747&cgcid=2889&px8324=p6&sourceContext=usedPaidSearchNoZip&ax8324=118787939&query=range%20rover%20autobiography&matchType=p&msnKeywordId=82464709068878&msnAdId=82463612475141&networktype=o&device=c&tgtid=kwd-82464709068878:loc-32&physloc=5120&msclkid=4daf002547b612b6c53b686c3a38f329&utm_source=bing&utm_medium=cpc&utm_campaign=Land%20Rover-CA-comp-en-srch-xx%20(1444)&utm_term=used%20land%20rover%20rangerover%20autobiography&utm_content=Range%20Rover%20Used-Maker-Model-With-Trims%20(8667121)" target="_blank" tabindex="0">Range Rover Autobiography</a></li>
+                        <li tabindex="0"><a href="https://cars.mclaren.com/en/ultimate-models/mclaren-speedtail" target="_blank" tabindex="0">McLaren Speedtail</a></li>
+                        <li tabindex="0"><a href="https://fastestlaps.com/models/lamborghini-murcielago-lp-670-4-sv" target="_blank" tabindex="0">Lamborghini Murciélago</a></li>
+                        <li tabindex="0"><a href="https://en.wikipedia.org/wiki/Lamborghini_Gallardo" target="_blank" tabindex="0">Lamborghini Gallardo Superleggera</a></li>
+                        <li tabindex="0"><a href="https://www.lexus.ca/en/vehicles/f-models/lfa/" target="_blank" tabindex="0">Lexus LFA</a></li>
+                        <li tabindex="0"><a href="https://www.caranddriver.com/acura/nsx" target="_blank" tabindex="0">Acura NSX</a></li>
+                        <li tabindex="0"><a href="https://www.lamborghini.com/en-en/history/aventador-superveloce" target="_blank" tabindex="0">Lamborghini Aventador SV</a></li>
+                        <li tabindex="0"><a href="https://shop.ford.ca/showroom?searchid=700000001051407&campaignid=71700000013194640&&msclkid=7d820a6e67e51e84c7ba6227195b8264&gclid=7d820a6e67e51e84c7ba6227195b8264&gclsrc=3p.ds&gad_source=7#/" target="_blank" tabindex="0">Ford Flex</a></li>
+                        <li tabindex="0"><a href="https://www.vickarnissan.ca/vehicles/new/?st=asking_price,asc&view=grid&sc=new&qs=Nissan%20Kicks&utm_campaign=DB-search-car-new&TFCLID=95EAD276C352A6CE9FE369CC60C68B84&utm_source=bing&utm_medium=cpc&utm_content=568521122&utm_term=%22nissan%20kicks%20%22&msclkid=76bea07a453918dbf162c8333bc22453" target="_blank" tabindex="0">Nissan GT-R Premium</a></li>
+                        <li tabindex="0"><a href="https://www.nissan.ca/" target="_blank" tabindex="0">Nissan Rouge</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Copyright notice -->
+            <div class="copyright" tabindex="0">
+                <p tabindex="0">&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
+            </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
