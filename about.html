@@ -1,125 +1,149 @@
 <!DOCTYPE html>
+<!-- HTML5 document type declaration -->
 <html lang="en">
+<!-- Root element with language set to English -->
 <head>
+    <!-- Document metadata and resources -->
     <meta charset="UTF-8">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive viewport settings -->
     <title>About Us | Daniel Auto Dealer | Premium Vehicles Since 1980</title>
+    <!-- Page title that appears in browser tab -->
     <link rel="stylesheet" href="styles.css">
+    <!-- External CSS stylesheet link -->
     <style>
+        /* Embedded CSS styles for this document */
         
-    .shot-7 {
-        width: 50%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        display: block;
-        margin: 0 auto;
-    }
-    
-    /* Centering and basic text styling */
-    .section-title, .services-intro, .about-text h3, .team-member h3, 
-    .award h3, .testimonial p, .footer-section h3 {
-        text-align: center;
-    }
-    
-    .about-text, .timeline-event, .team-member, .service-card, 
-    .testimonial, .award, .footer-section {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 800px;
-    }
-    
-    .services-container, .team-grid, .awards-grid, .testimonial-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .service-card, .team-member, .award, .testimonial {
-        flex: 1 1 300px;
-        padding: 20px;
-    }
-    
-    .timeline {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cta-content {
-        text-align: center;
-    }
-    
-    .cta-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 20px;
-    }
-    
-    .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-    }
-    
-    .copyright {
-        text-align: center;
-        margin-top: 30px;
-    }
-    
-    /* Basic typography */
-    body {
-        line-height: 1.6;
-    }
-    
-    h1, h2, h3 {
-        line-height: 1.2;
-    }
-    
-    .service-card ul, .about-text {
-        text-align: left;
-        padding-left: 20px;
-    }
-    
-    blockquote {
-        font-style: italic;
-        margin: 20px 0;
-        padding: 0 20px;
-    }
-    </style>
+        /* Styling for the showroom image */
+        .shot-7 {
+            width: 50%; /* Half of container width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            display: block; /* Block-level element */
+            margin: 0 auto; /* Centered horizontally */
+        }
+        
+        /* Centering and text alignment for various elements */
+        .section-title, .services-intro, .about-text h3, .team-member h3, 
+        .award h3, .testimonial p, .footer-section h3 {
+            text-align: center; /* Center-aligned text */
+        }
+        
+        /* Common styling for content containers */
+        .about-text, .timeline-event, .team-member, .service-card, 
+        .testimonial, .award, .footer-section {
+            text-align: center; /* Center-aligned text */
+            margin: 0 auto; /* Centered horizontally */
+            max-width: 800px; /* Maximum width constraint */
+        }
+        
+        /* Flexbox layouts for various containers */
+        .services-container, .team-grid, .awards-grid, .testimonial-container {
+            display: flex; /* Flexbox layout */
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: center; /* Center items */
+            gap: 20px; /* Spacing between items */
+        }
+        
+        /* Card-style elements */
+        .service-card, .team-member, .award, .testimonial {
+            flex: 1 1 300px; /* Flexible sizing with minimum width */
+            padding: 20px; /* Inner spacing */
+        }
+        
+        /* Timeline layout */
+        .timeline {
+            display: flex; /* Flexbox layout */
+            flex-direction: column; /* Vertical stacking */
+            align-items: center; /* Center alignment */
+        }
+        
+        /* Call-to-action section styling */
+        .cta-content {
+            text-align: center; /* Center-aligned text */
+        }
+        
+        /* Button container styling */
+        .cta-buttons {
+            display: flex; /* Flexbox layout */
+            justify-content: center; /* Center buttons */
+            gap: 15px; /* Spacing between buttons */
+            margin-top: 20px; /* Top margin */
+        }
+        
+        /* Footer layout */
+        .footer-content {
+            display: flex; /* Flexbox layout */
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: center; /* Center items */
+            gap: 40px; /* Spacing between columns */
+        }
+        
+        /* Copyright notice styling */
+        .copyright {
+            text-align: center; /* Center-aligned text */
+            margin-top: 30px; /* Top margin */
+        }
+        
+        /* Base typography */
+        body {
+            line-height: 1.6; /* Comfortable line spacing */
+        }
+        
+        /* Heading typography */
+        h1, h2, h3 {
+            line-height: 1.2; /* Tighter line spacing */
+        }
+        
+        /* Text alignment for specific elements */
+        .service-card ul, .about-text {
+            text-align: left; /* Left-aligned text */
+            padding-left: 20px; /* Left padding */
+        }
+        
+        /* Blockquote styling */
+        blockquote {
+            font-style: italic; /* Italic text */
+            margin: 20px 0; /* Vertical margins */
+            padding: 0 20px; /* Horizontal padding */
+        }
     </style>
 </head>
+
 <body>
+    <!-- Main page content begins --> 
+    
+    <!-- Site Header and Navigation -->
     <header>
         <nav class="navbar">
-            <div class="logo">Daniel-Auto</div>
+            <div class="logo">Daniel-Auto</div> <!-- Company logo text -->
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="inventory.html">Inventory</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a> <!-- Navigation link to Home -->
+                <a href="about.html">About Us</a> <!-- Navigation link to About -->
+                <a href="inventory.html">Inventory</a> <!-- Navigation link to Inventory -->
+                <a href="contact.html">Contact</a> <!-- Navigation link to Contact -->
             </div>
         </nav>
     </header>
     
-    <!-- Hero Section -->
+    <!-- Hero Section with Showroom Image -->
     <section id="home" class="hero">
-        <img class="hero-video" src="dealer.png" alt="Daniel Auto Dealer showroom"> 
+        <img class="hero-video" src="dealer.png" alt="Daniel Auto Dealer showroom"> <!-- Showroom image -->
         <div class="hero-content">
-            <h1>Our Story of Automotive Successes</h1>
-            <p>Four decades of passion, precision, and unparalleled service in luxury automotive sales</p>
-            <a href="inventory.html" class="btn">Explore Our Collection</a>
+            <h1>Our Story of Automotive Successes</h1> <!-- Main headline -->
+            <p>Four decades of passion, precision, and unparalleled service in luxury automotive sales</p> <!-- Subheading -->
+            <a href="inventory.html" class="btn">Explore Our Collection</a> <!-- Call-to-action button -->
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section with Company Information -->
     <section id="about" class="section section-dark">
-        <h2 class="section-title">Our Legacy of Luxury</h2>
+        <h2 class="section-title">Our Legacy of Luxury</h2> <!-- Section title -->
         <div class="about-content">
             <div class="about-text">
+                <!-- Company history and philosophy -->
                 <h3>The Daniel Auto Dealer Difference</h3>
                 <p>Founded in 1980 by auto maker Daniel Aduayi, Daniel Auto Dealer began as a small family-run dealership with a big dream: to redefine luxury car buying. What started as a modest operation with just five vehicles has grown into one of the most respected names in premium automotive retail, with showrooms across three states and an international empire.</p>
 
@@ -138,10 +162,11 @@
         </div>
     </section>
 
-    <!-- History Timeline -->
+    <!-- Company History Timeline -->
     <section id="history" class="section">
-        <h2 class="section-title">Our Journey Through Time</h2>
+        <h2 class="section-title">Our Journey Through Time</h2> <!-- Section title -->
         <div class="timeline">
+            <!-- Timeline events -->
             <div class="timeline-event">
                 <h3>1980</h3>
                 <p>Daniel Aduayi opens the original dealership in downtown Chicago with just 5 pre-owned luxury vehicles</p>
@@ -173,44 +198,51 @@
         </div>
     </section>
 
-    <!-- Leadership Section -->
+    <!-- Leadership Team Section -->
     <section id="leadership" class="section section-dark">
-        <h2 class="section-title">Meet Our Leadership</h2>
-        <div class="team-grid">
-            <div class="team-member">
-    <h3>Daniel Aduayi</h3>
-    <p class="title">Founder & CEO</p>
-    <p>With 43 years in the luxury auto industry, Daniel's vision continues to guide our company. His famous saying: "Sell the experience, not just the car."</p>
-</div>
-
-            </div>
-            <div class="team-member">
-                <h3>Ashley hoitink</h3>
-                <p class="title">President & COO</p>
-                <p>Former Porsche North America executive who joined in 2012, revolutionizing our operations and customer service processes.</p>
-                <img src="https://media.istockphoto.com/id/1466995518/photo/business-woman-and-worker-portrait-at-office-desk-as-administration-executive-company-manager.jpg?s=612x612&w=0&k=20&c=NvKeG6Fh0_VVfH_N0Ka-5j8284XJhL2VTJfe6IwDkWQ=" alt="womab that works for autio">
-            </div>
-            <div class="team-member">
-                <h3>Michael Rodriguez</h3>
-                <p class="title">Director of Sales</p>
-                <p>20-year veteran who personally oversees our sales team and client relationships, with expertise in exotic and limited-edition vehicles.</p>
-                <img src="https://media.istockphoto.com/id/2063799507/photo/business-portrait-and-black-man-in-city-outdoor-for-career-or-job-of-businessman-face.jpg?s=612x612&w=0&k=20&c=DB5oXy7_aasPbpr7zfpfV92ZYsPIQfFWLyweKEz_UVs=" alt="man that works for danirlauto">
-            </div>
-            <div class="team-member">
-                <h3>David Park</h3>
-                <p class="title">Master Technician</p>
-                <p>One of only 12 technicians in the U.S. certified by Ferrari, Lamborghini, and McLaren, ensuring every vehicle meets exacting standards.</p>
-                <img src="https://media.istockphoto.com/id/1503232125/photo/happy-smile-and-portrait-of-business-man-in-city-for-professional-corporate-and-pride.jpg?s=612x612&w=0&k=20&c=uPu3GKHW507ruenLY8xwsB3OgOSwLSWjE3fBpy20Hac=" alt="man that works for daniel auto for mny years">
-            </div>
+    <h2 class="section-title">Meet Our Leadership</h2>
+    <div class="team-grid">
+        <!-- Team member cards -->
+        <div class="team-member">
+            <h3>Daniel Aduayi</h3>
+            <p class="title">Founder & CEO</p>
+            <p>With 43 years in the luxury auto industry, Daniel's vision continues to guide our company."</p>
+             <img src="https://i.pinimg.com/736x/27/8d/95/278d95af54fc443462d97e66a919ead4.jpg" 
+                 alt="David Park, Master Technician"
+                 style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin: 15px auto; display: block; border: 3px solid #d4af37;">
         </div>
-    </section>
+        <div class="team-member">
+            <h3>Ashley Hoitink</h3>
+            <p class="title">President & COO</p>
+            <p>Former Porsche North America executive who joined in 2012, revolutionizing our operations and customer service processes.</p>
+            <img src="https://media.istockphoto.com/id/1466995518/photo/business-woman-and-worker-portrait-at-office-desk-as-administration-executive-company-manager.jpg?s=612x612&w=0&k=20&c=NvKeG6Fh0_VVfH_N0Ka-5j8284XJhL2VTJfe6IwDkWQ=" 
+                 alt="Ashley Hoitink, President & COO"
+                 style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin: 15px auto; display: block; border: 3px solid #d4af37;">
+        </div>
+        <div class="team-member">
+            <h3>Michael Rodriguez</h3>
+            <p class="title">Director of Sales</p>
+            <p>20-year veteran who personally oversees our sales team and client relationships, with expertise in exotic and limited-edition vehicles.</p>
+            <img src="https://media.istockphoto.com/id/2063799507/photo/business-portrait-and-black-man-in-city-outdoor-for-career-or-job-of-businessman-face.jpg?s=612x612&w=0&k=20&c=DB5oXy7_aasPbpr7zfpfV92ZYsPIQfFWLyweKEz_UVs=" 
+                 alt="Michael Rodriguez, Director of Sales"
+                 style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin: 15px auto; display: block; border: 3px solid #d4af37;">
+        </div>
+        <div class="team-member">
+            <h3>David Park</h3>
+            <p class="title">Master Technician</p>
+            <p>One of only 12 technicians in the U.S. certified by Ferrari, Lamborghini, and McLaren, ensuring every vehicle meets exacting standards.</p>
+            <img src="https://media.istockphoto.com/id/1503232125/photo/happy-smile-and-portrait-of-business-man-in-city-for-professional-corporate-and-pride.jpg?s=612x612&w=0&k=20&c=uPu3GKHW507ruenLY8xwsB3OgOSwLSWjE3fBpy20Hac=" 
+                 alt="David Park, Master Technician"
+                 style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin: 15px auto; display: block; border: 3px solid #d4af37;">
+        </div>
+    </div>
+</section>
 
-
-
-    <!-- Testimonial Section -->
+    <!-- Client Testimonials Section -->
     <section id="testimonials" class="section">
-        <h2 class="section-title">Client Experiences</h2>
+        <h2 class="section-title">Client Experiences</h2> <!-- Section title -->
         <div class="testimonial-container">
+            <!-- Testimonial cards -->
             <div class="testimonial">
                 <blockquote>"After buying from five different luxury dealers, I'll never go anywhere but Daniel Auto. Their attention to detail and after-sale service is unmatched in the industry."</blockquote>
                 <p>- James Wilson, Collector (12 vehicles purchased)</p>
@@ -226,12 +258,10 @@
         </div>
     </section>
 
-
-
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
         <div class="copyright">
-            <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p>
+            <p>&copy; 2025 Daniel Auto Dealer. All rights reserved.</p> <!-- Copyright notice -->
         </div>
     </footer>
 </body>
